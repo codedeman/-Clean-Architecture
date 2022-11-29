@@ -9,6 +9,12 @@ import XCTest
 @testable import MovieChallenge
 
 final class MovieChallengeTests: XCTestCase {
+    var suit: MockMovieModelTest!
+    
+    override  func setUp() {
+        super.setUp()
+        self.suit = MockMovieModelTest(worker: MovieNetWork())
+    }
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -19,11 +25,10 @@ final class MovieChallengeTests: XCTestCase {
     }
 
     func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+        suit.performGetMovie(keyWord: "kevin")
+        suit.listMovie.bind {  list  in
+            XCTAssertTrue(!list.filter {$0.Title?.uppercased() == "kevin".uppercased()}.isEmpty)
+        }
     }
 
     func testPerformanceExample() throws {
@@ -33,4 +38,18 @@ final class MovieChallengeTests: XCTestCase {
         }
     }
 
+}
+
+
+
+class MockMovieModelTest: MovieModelWithoutRx {
+    
+    override func performGetMovie(keyWord: String) {
+        let list = [SearchModel.init(Title: "Kevin",Type: "", Poster: "KKKK"),
+                    SearchModel.init(Title: "Dat",Poster: "KKKK"),
+                    SearchModel.init(Title: "Fa",Poster: "KKKK"),
+                    SearchModel.init(Title: "Test",Poster: "KKKK")
+        ]
+        self.listMovie.value = list
+    }
 }
