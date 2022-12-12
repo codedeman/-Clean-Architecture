@@ -37,6 +37,10 @@ class MovieTableViewCell: UITableViewCell {
         guard let url = URL(string: data.Poster ?? "") else {return}
         self.ivMovie.k_setImageWithUrl(url: url,placeHolder: UIImage(named: "default"),showLoading: true)
     }
+    func binding(data: UniversityModel) {
+        self.lblTitle.text = data.name
+        self.lblSubTitle.text = data.country
+    }
 }
 
 extension UIImageView {

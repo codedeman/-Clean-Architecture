@@ -10,6 +10,10 @@
 		0A40FE0A29367184002E90AF /* BasicFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A40FE0929367184002E90AF /* BasicFunction.swift */; };
 		0A56DD372945851200AFD75B /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 0A56DD362945851200AFD75B /* RxCocoa */; };
 		0A56DD392945851200AFD75B /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0A56DD382945851200AFD75B /* RxSwift */; };
+		0A56DD3B2947082600AFD75B /* UniversityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56DD3A2947082600AFD75B /* UniversityModel.swift */; };
+		0A56DD3F2947086B00AFD75B /* UniversityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56DD3D2947086B00AFD75B /* UniversityViewController.swift */; };
+		0A56DD402947086B00AFD75B /* UniversityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0A56DD3E2947086B00AFD75B /* UniversityViewController.xib */; };
+		0A56DD42294708DA00AFD75B /* UniversityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A56DD41294708DA00AFD75B /* UniversityViewModel.swift */; };
 		0AB5771B2935D83700DFA5D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5771A2935D83700DFA5D2 /* AppDelegate.swift */; };
 		0AB5771D2935D83700DFA5D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5771C2935D83700DFA5D2 /* SceneDelegate.swift */; };
 		0AB5771F2935D83700DFA5D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB5771E2935D83700DFA5D2 /* ViewController.swift */; };
@@ -31,7 +35,7 @@
 		0AB577702936465C00DFA5D2 /* DataTest.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0AB5776F2936465C00DFA5D2 /* DataTest.strings */; };
 		0ACB5F6F29431FB9003917FD /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB5F6E29431FB9003917FD /* APIRequest.swift */; };
 		0ACB5F71294320EA003917FD /* MovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB5F70294320EA003917FD /* MovieRequest.swift */; };
-		0ACB5F78294325A9003917FD /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB5F77294325A9003917FD /* APIClient.swift */; };
+		0ACB5F78294325A9003917FD /* NetWorkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ACB5F77294325A9003917FD /* NetWorkLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +58,10 @@
 /* Begin PBXFileReference section */
 		0A40FE0929367184002E90AF /* BasicFunction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasicFunction.swift; sourceTree = "<group>"; };
 		0A56DD342945683A00AFD75B /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		0A56DD3A2947082600AFD75B /* UniversityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityModel.swift; sourceTree = "<group>"; };
+		0A56DD3D2947086B00AFD75B /* UniversityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityViewController.swift; sourceTree = "<group>"; };
+		0A56DD3E2947086B00AFD75B /* UniversityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UniversityViewController.xib; sourceTree = "<group>"; };
+		0A56DD41294708DA00AFD75B /* UniversityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UniversityViewModel.swift; sourceTree = "<group>"; };
 		0AB577172935D83700DFA5D2 /* MovieChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AB5771A2935D83700DFA5D2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0AB5771C2935D83700DFA5D2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -79,7 +87,7 @@
 		0AB5776F2936465C00DFA5D2 /* DataTest.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DataTest.strings; sourceTree = "<group>"; };
 		0ACB5F6E29431FB9003917FD /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		0ACB5F70294320EA003917FD /* MovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequest.swift; sourceTree = "<group>"; };
-		0ACB5F77294325A9003917FD /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		0ACB5F77294325A9003917FD /* NetWorkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +125,16 @@
 			path = PlayGroundTesting;
 			sourceTree = "<group>";
 		};
+		0A56DD3C2947084300AFD75B /* University */ = {
+			isa = PBXGroup;
+			children = (
+				0A56DD3D2947086B00AFD75B /* UniversityViewController.swift */,
+				0A56DD3E2947086B00AFD75B /* UniversityViewController.xib */,
+				0A56DD41294708DA00AFD75B /* UniversityViewModel.swift */,
+			);
+			path = University;
+			sourceTree = "<group>";
+		};
 		0AB5770E2935D83700DFA5D2 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +159,7 @@
 		0AB577192935D83700DFA5D2 /* MovieChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				0A56DD3C2947084300AFD75B /* University */,
 				0AB577682936363200DFA5D2 /* DetailScreen */,
 				0AB5776229360F4800DFA5D2 /* Utility */,
 				0AB5775B2935E1A500DFA5D2 /* ViewModels */,
@@ -182,7 +201,7 @@
 			children = (
 				0ACB5F6E29431FB9003917FD /* APIRequest.swift */,
 				0ACB5F70294320EA003917FD /* MovieRequest.swift */,
-				0ACB5F77294325A9003917FD /* APIClient.swift */,
+				0ACB5F77294325A9003917FD /* NetWorkLayer.swift */,
 			);
 			path = NetWork;
 			sourceTree = "<group>";
@@ -191,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				0AB577542935D95600DFA5D2 /* ArticleModel.swift */,
+				0A56DD3A2947082600AFD75B /* UniversityModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -358,6 +378,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A56DD402947086B00AFD75B /* UniversityViewController.xib in Resources */,
 				0AB577272935D83900DFA5D2 /* LaunchScreen.storyboard in Resources */,
 				0AB577242935D83900DFA5D2 /* Assets.xcassets in Resources */,
 				0AB5775A2935DB6300DFA5D2 /* MovieTableViewCell.xib in Resources */,
@@ -395,8 +416,11 @@
 				0AB577592935DB6300DFA5D2 /* MovieTableViewCell.swift in Sources */,
 				0AB5771B2935D83700DFA5D2 /* AppDelegate.swift in Sources */,
 				0AB5776429360F9300DFA5D2 /* Operation.swift in Sources */,
-				0ACB5F78294325A9003917FD /* APIClient.swift in Sources */,
+				0A56DD3B2947082600AFD75B /* UniversityModel.swift in Sources */,
+				0ACB5F78294325A9003917FD /* NetWorkLayer.swift in Sources */,
 				0AB5775F2935E23400DFA5D2 /* MovieViewModel.swift in Sources */,
+				0A56DD3F2947086B00AFD75B /* UniversityViewController.swift in Sources */,
+				0A56DD42294708DA00AFD75B /* UniversityViewModel.swift in Sources */,
 				0AB5776129360A1700DFA5D2 /* Handler.swift in Sources */,
 				0AB577662936102000DFA5D2 /* ImageDowloadManager.swift in Sources */,
 				0A40FE0A29367184002E90AF /* BasicFunction.swift in Sources */,

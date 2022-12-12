@@ -7,7 +7,7 @@
 
 import Foundation
 
-class MovieRequest: APIRequest {
+class UniversityRequest: APIRequest {
     var method = RequestType.GET
     var path = "search"
     var parameters = [String: String]()

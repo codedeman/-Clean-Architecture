@@ -13,7 +13,7 @@ protocol MovieModelProtocol: AnyObject {
     func getlistMovie(keyworld: String) -> Observable <MovieResponse?>
 }
 
-class MovieModel: APIClient, MovieModelProtocol {
+class MovieModel: NetWorkLayer, MovieModelProtocol {
     
     func getlistMovie(keyworld: String) -> Observable<MovieResponse?> {
         let rootURl = "https://www.omdbapi.com/?s="
