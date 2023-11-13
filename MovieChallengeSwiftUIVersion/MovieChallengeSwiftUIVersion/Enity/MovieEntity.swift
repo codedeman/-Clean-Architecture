@@ -8,7 +8,7 @@
 import Foundation
 
 struct MovieResponse: Codable {
-    var Search: [SearchModel]?
+    var Search: [SearchModel] = []
     var totalResults: String?
     var Response: String?
     init (str: String) {

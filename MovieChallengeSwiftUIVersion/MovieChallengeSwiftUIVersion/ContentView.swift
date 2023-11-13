@@ -8,20 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var viewModel: MovieViewModel = .init()
+    @StateObject var viewModel = MovieViewModel()
     @Environment(\.dismiss) var dismiss
     var body: some View {
         NavigationView(content: {
             VStack {
-
-                if viewModel.isSearching {
-                    ProgressView()
-                } else {
-                    List(viewModel.result) { movie in
-                        MovieRow(movie: movie)
+                List(viewModel.result) { movie in
+                    MovieRow(movie: movie)
+                }.overlay {
+                    if viewModel.isSearching {
+                        ProgressView()
                     }
                 }
-
             }
         }).navigationTitle("Search").toolbar(content: {
             ToolbarItem(placement: .confirmationAction) {
@@ -30,13 +28,6 @@ struct ContentView: View {
                 }
             }
         }).searchable(text: $viewModel.searchTerm)
-
-        .onReceive(viewModel.$result, perform: { _ in
-            Task {
-               await viewModel.executeQuery()
-            }
-        })
-
     }
 }
 
