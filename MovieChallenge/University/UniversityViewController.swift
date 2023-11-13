@@ -8,17 +8,41 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import SafariServices
 
 class UniversityViewController: UIViewController {
 
     private let disposeBag = DisposeBag()
     var viewModel = UniversityViewModel()
     private let tableView = UITableView()
+    
 
     private let searchController: UISearchController = {
         let searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.placeholder = "Search for university"
         return searchController
+    }()
+    
+    private let tfPassWorld: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.placeholder = "Pass world"
+        return tf
+    }()
+    
+    private let tfUserName: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.placeholder = "User name"
+        return tf
+    }()
+    
+    private let btnLogin: UIButton = {
+        let btn = UIButton()
+        btn.translatesAutoresizingMaskIntoConstraints = false
+        btn.backgroundColor = .green
+        btn.setTitle("Login", for: .selected)
+        return btn
     }()
     
     override func viewDidLoad() {
