@@ -31,7 +31,7 @@ final class MovieViewModel: ObservableObject {
     }
 
 
-    private func searchBooks(matching searchTerm: String)  -> AnyPublisher<[SearchModel], Never> {
+    private func searchBooks(matching searchTerm: String) -> AnyPublisher<[SearchModel], Never> {
         let escapedSearchTerm = searchTerm.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         let rootURL = "https://www.omdbapi.com/?s="
         let key = "&apikey=b831f50c"

@@ -13,13 +13,16 @@ struct ContentView: View {
     var body: some View {
         NavigationView(content: {
             VStack {
-                List(viewModel.result) { movie in
-                    MovieRow(movie: movie)
-                }.overlay {
-                    if viewModel.isSearching {
-                        ProgressView()
+                if viewModel.isSearching {
+                    ProgressView()
+                } else {
+                    List(viewModel.result) { movie in
+                        MovieRow(movie: movie)
+                    }.overlay {
+
                     }
                 }
+
             }
         }).navigationTitle("Search").toolbar(content: {
             ToolbarItem(placement: .confirmationAction) {
