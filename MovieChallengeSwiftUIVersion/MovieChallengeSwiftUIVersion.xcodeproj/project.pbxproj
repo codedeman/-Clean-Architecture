@@ -17,6 +17,8 @@
 		0A0474DE2B012D7F008337BD /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0474DD2B012D7F008337BD /* MovieViewModel.swift */; };
 		0A0474E12B012E22008337BD /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0474E02B012E22008337BD /* MovieEntity.swift */; };
 		0A0474E32B01C57D008337BD /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0474E22B01C57D008337BD /* MovieRow.swift */; };
+		0A9A35B82BC4EB410032ADA8 /* omdbapi.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 0A9A35B72BC4EB410032ADA8 /* omdbapi.com.cer */; };
+		0AA2BA022BBE9C1100B5ABF2 /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA2BA012BBE9C1100B5ABF2 /* NetWork.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		0A0474DD2B012D7F008337BD /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		0A0474E02B012E22008337BD /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
 		0A0474E22B01C57D008337BD /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
+		0A9A35B72BC4EB410032ADA8 /* omdbapi.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = omdbapi.com.cer; sourceTree = "<group>"; };
+		0AA2BA012BBE9C1100B5ABF2 /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +105,7 @@
 		0A0474B12B012D4F008337BD /* MovieChallengeSwiftUIVersion */ = {
 			isa = PBXGroup;
 			children = (
+				0A9A35B72BC4EB410032ADA8 /* omdbapi.com.cer */,
 				0A0474DF2B012E0E008337BD /* Enity */,
 				0A0474B22B012D4F008337BD /* MovieChallengeSwiftUIVersionApp.swift */,
 				0A0474B42B012D4F008337BD /* ContentView.swift */,
@@ -109,6 +114,7 @@
 				0A0474BB2B012D51008337BD /* MovieChallengeSwiftUIVersion.entitlements */,
 				0A0474B82B012D51008337BD /* Preview Content */,
 				0A0474E22B01C57D008337BD /* MovieRow.swift */,
+				0AA2BA012BBE9C1100B5ABF2 /* NetWork.swift */,
 			);
 			path = MovieChallengeSwiftUIVersion;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0A0474BA2B012D51008337BD /* Preview Assets.xcassets in Resources */,
+				0A9A35B82BC4EB410032ADA8 /* omdbapi.com.cer in Resources */,
 				0A0474B72B012D51008337BD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +285,7 @@
 			files = (
 				0A0474B52B012D4F008337BD /* ContentView.swift in Sources */,
 				0A0474E32B01C57D008337BD /* MovieRow.swift in Sources */,
+				0AA2BA022BBE9C1100B5ABF2 /* NetWork.swift in Sources */,
 				0A0474E12B012E22008337BD /* MovieEntity.swift in Sources */,
 				0A0474B32B012D4F008337BD /* MovieChallengeSwiftUIVersionApp.swift in Sources */,
 				0A0474DE2B012D7F008337BD /* MovieViewModel.swift in Sources */,

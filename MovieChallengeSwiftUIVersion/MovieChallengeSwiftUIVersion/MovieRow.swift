@@ -14,10 +14,12 @@ struct MovieRow: View {
             AsyncImage(url: movie.convertStrtoURL())
                 Text(movie.Title ?? "")
                     .font(.headline)
+                    .padding(.leading)
                 Text("by \(movie.imdbID ?? "")")
-                    .font(.subheadline)
+                .font(.subheadline)
+                .padding(.leading)
 
-        }
+        }.padding()
     }
 }
 

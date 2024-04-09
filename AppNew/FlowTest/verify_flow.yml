@@ -1,0 +1,6 @@
+appId: kevin.AppNew
+---
+- launchApp
+- runScript:
+    file: script.js
+- assertVisible: "Process,${output.currentDate}"
