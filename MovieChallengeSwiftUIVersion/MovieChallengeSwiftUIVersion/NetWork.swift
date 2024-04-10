@@ -41,7 +41,7 @@ final class NetWork: NSObject, NetWorkLayerProtocol {
         let escapedSearchTerm = searchTerm.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
         let rootURL = "https://www.omdbapi.com/?s="
         let key = "&apikey=b831f50c"
-        let urlString = rootURL + escapedSearchTer + key
+        let urlString = rootURL + "Rrr" + key
         let url = URL(string: urlString)!
 
         return session.dataTaskPublisher(for: url)
@@ -66,32 +66,43 @@ final class NetWork: NSObject, NetWorkLayerProtocol {
 
 extension NetWork: URLSessionDelegate {
     func urlSession(_ session: URLSession, didReceive challenge: URLAuthenticationChallenge, completionHandler: @escaping (URLSession.AuthChallengeDisposition, URLCredential?) -> Void) {
-        if (challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust) {
-                    if let serverTrust = challenge.protectionSpace.serverTrust {
-                        var secresult = SecTrustResultType.invalid
-                        let status = SecTrustEvaluate(serverTrust, &secresult)
+        if challenge.protectionSpace.authenticationMethod == NSURLAuthenticationMethodServerTrust,
+           let serverTrust = challenge.protectionSpace.serverTrust {
 
-                        if(errSecSuccess == status) {
-                            print(SecTrustGetCertificateCount(serverTrust))
-                            if let serverCertificate = SecTrustGetCertificateAtIndex(serverTrust, 0) {
-
-                                // Public key pinning
-                                let serverPublicKey = SecCertificateCopyPublicKey(serverCertificate)
-                                let serverPublicKeyData:NSData = SecKeyCopyExternalRepresentation(serverPublicKey!, nil )!
-                                let keyHash = sha256(data: serverPublicKeyData as Data)
-                                if (keyHash == pinnedPublicKeyHash) {
-                                    // Success! This is our server
-                                    completionHandler(.useCredential, URLCredential(trust:serverTrust))
-                                    return
-                                } else {
-                                    print("error detected")
-                                }
-
+            var error: CFError?
+            if SecTrustEvaluateWithError(serverTrust, &error) {
+                if let certificateChain = SecTrustCopyCertificateChain(serverTrust) {
+                    for index in 0..<CFArrayGetCount(certificateChain) {
+                        if let certificate = CFArrayGetValueAtIndex(certificateChain, index) {
+                            let certRef = Unmanaged<SecCertificate>.fromOpaque(certificate).takeUnretainedValue()
+                            let serverPublicKey = SecCertificateCopyKey(certRef)
+                            let serverPublicKeyData = SecKeyCopyExternalRepresentation(serverPublicKey!, nil )! as Data
+                            let keyHash = sha256(data: serverPublicKeyData)
+                            if keyHash == pinnedPublicKeyHash {
+                                // Success! This is our server
+                                completionHandler(.useCredential, URLCredential(trust: serverTrust))
+                                return
+                            } else {
+                                print("Error detected")
                             }
                         }
                     }
+                } else {
+                    print("Error getting certificate chain")
                 }
+            } else {
+                if let error = error {
+                    print("Error evaluating server trust: \(error)")
+                } else {
+                    print("Error evaluating server trust")
+                }
+            }
+        }
 
-       completionHandler(.cancelAuthenticationChallenge, nil)
-     }
+        completionHandler(.cancelAuthenticationChallenge, nil)
+    }
+
+
+
+
 }

@@ -7,15 +7,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "73E80733-FE85-4686-A676-79DA775DEECC"
+            uuid = "3EDBEDFA-57DF-48A5-B1D9-CD64A636FAC3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MovieChallengeSwiftUIVersion/NetWork.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "urlSession(_:didReceive:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -23,7 +23,69 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "3F94C4EB-E78F-45E9-A621-BCC89FF27C54"
+            uuid = "5AB4E9B2-2B7C-4E21-8FCB-834F3BB84959"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieChallengeSwiftUIVersion/NetWork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
+            landmarkName = "urlSession(_:didReceive:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5AB4E9B2-2B7C-4E21-8FCB-834F3BB84959 - e81c9a8664d9a92e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieChallengeSwiftUIVersion.NetWork.urlSession(_: __C.NSURLSession, didReceive: __C.NSURLAuthenticationChallenge, completionHandler: (__C.NSURLSessionAuthChallengeDisposition, Swift.Optional&lt;__C.NSURLCredential&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MovieChallengeSwiftUIVersion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/movie_challenge/MovieChallengeSwiftUIVersion/MovieChallengeSwiftUIVersion/NetWork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76">
+               </Location>
+               <Location
+                  uuid = "5AB4E9B2-2B7C-4E21-8FCB-834F3BB84959 - e81c9a8664d9a92e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MovieChallengeSwiftUIVersion.NetWork.urlSession(_: __C.NSURLSession, didReceive: __C.NSURLAuthenticationChallenge, completionHandler: (__C.NSURLSessionAuthChallengeDisposition, Swift.Optional&lt;__C.NSURLCredential&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "MovieChallengeSwiftUIVersion"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/kevin/movie_challenge/MovieChallengeSwiftUIVersion/MovieChallengeSwiftUIVersion/NetWork.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "76"
+                  endingLineNumber = "76">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6A17729B-0B73-4687-B825-33B4E298E614"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieChallengeSwiftUIVersion/NetWork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "urlSession(_:didReceive:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D89F2232-BC73-4596-B684-3FA38E5391D8"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -32,6 +94,22 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
+            landmarkName = "urlSession(_:didReceive:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81113D5C-E9C7-484F-AF12-BEE1D4FA82BB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MovieChallengeSwiftUIVersion/NetWork.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "urlSession(_:didReceive:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
