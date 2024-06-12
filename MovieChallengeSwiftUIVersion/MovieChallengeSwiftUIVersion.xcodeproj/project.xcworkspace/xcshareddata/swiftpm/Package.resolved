@@ -1,5 +1,5 @@
 {
-  "originHash" : "2e207fa0eafc81d4499f1f2cafff57ffdfd4410f0588c7ead512aa54bde747b5",
+  "originHash" : "97d5e10fe56f9cc8abe4fe1e95c2e14dcb91419583cf06892ae09bd9c364f53a",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -11,12 +11,12 @@
       }
     },
     {
-      "identity" : "rxswift",
+      "identity" : "shimmerloading",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/ReactiveX/RxSwift",
+      "location" : "https://github.com/codedeman/ShimmerLoading.git",
       "state" : {
-        "branch" : "main",
-        "revision" : "91a36920b1ec069004fef9dc41b7c5dbcaa5fffe"
+        "revision" : "369b0e6b4c13c7bd0ff05d2ebcbe8868b5d6b1ae",
+        "version" : "1.0.0"
       }
     }
   ],

@@ -11,7 +11,9 @@ import RxCocoa
 
 class ViewController: UIViewController {
     
-  
+//    let worker = Worker()
+//    var task: Task<(), Never>?
+
     @IBOutlet weak var lblEmptyMessage: UILabel!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchBarView: UISearchBar!

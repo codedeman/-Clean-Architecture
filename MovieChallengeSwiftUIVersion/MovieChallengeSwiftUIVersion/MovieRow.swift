@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ShimmerLoading
 
 struct MovieRow: View {
     var movie: SearchModel
@@ -23,3 +24,20 @@ struct MovieRow: View {
     }
 }
 
+
+struct MovieRowShimmer: View {
+
+    var body: some View {
+        VStack(alignment: .leading) {
+            ShimmerView(color: Color.white, direction: .leftToRight) {
+                Text("HHHHHHHHHHHH")
+                    .font(.headline)
+                    .padding(.leading)
+                Text("HHHHHHHHHHHH")
+                    .font(.subheadline)
+                    .padding(.leading)
+            }
+
+        }.padding()
+    }
+}

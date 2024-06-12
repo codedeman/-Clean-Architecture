@@ -9,14 +9,17 @@ import Foundation
 import Combine
 import CommonCrypto
 import Security
+import CommonCrypto
+
 
 protocol NetWorkLayerProtocol {
      func searchBooks(matching searchTerm: String) -> AnyPublisher<[SearchModel], Never>
 }
 
 final class NetWork: NSObject, NetWorkLayerProtocol {
-    private var pinnedPublicKeyHash = "a50c7e04770731cbbd299617d138a632642a9eb3f1ebd019394f80f84890d21b"
-    private var pinnedCertificateHash = "5b691efcacf47bbe0095fb906cdbe44caf2751ea0ea464f4c46608ee46e8bff2"
+
+    private var pinnedPublicKeyHash = "a1a84e956b70079354ef4060a95930597923e4c53f81fe7298614a091d130f5a"
+    private var pinnedCertificateHash = "08dc3114fd05a6f12a48f76a76a4f43d5fe7c3be171d9ec0d303375a5d18c82c"
     private lazy var session = URLSession(configuration: .default, delegate: self, delegateQueue: nil)
 
     let rsa2048Asn1Header:[UInt8] = [
@@ -25,17 +28,14 @@ final class NetWork: NSObject, NetWorkLayerProtocol {
     ]
 
 
-    private func sha256(data : Data) -> String {
-         var keyWithHeader = Data(bytes: rsa2048Asn1Header)
-         keyWithHeader.append(data)
-         var hash = [UInt8](repeating: 0,  count: Int(CC_SHA256_DIGEST_LENGTH))
+    private func sha256(data: Data) -> String {
+        var hash = [UInt8](repeating: 0,  count: Int(CC_SHA256_DIGEST_LENGTH))
+        data.withUnsafeBytes {
+            _ = CC_SHA256($0.baseAddress, CC_LONG(data.count), &hash)
+        }
+        return Data(hash).map { String(format: "%02hhx", $0) }.joined()
+    }
 
-         keyWithHeader.withUnsafeBytes {
-             _ = CC_SHA256($0, CC_LONG(keyWithHeader.count), &hash)
-         }
-
-         return Data(hash).base64EncodedString()
-     }
 
     func searchBooks(matching searchTerm: String) -> AnyPublisher<[SearchModel], Never> {
         let escapedSearchTerm = searchTerm.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
@@ -55,13 +55,6 @@ final class NetWork: NSObject, NetWorkLayerProtocol {
 
     }
 
-    private lazy var certificates: [Data] = {
-        let url = Bundle.main.url(forResource: "omdbapi.com", withExtension: "cer")!
-        let data = try! Data(contentsOf: url)
-        return [data]
-    }()
-
-    
 }
 
 extension NetWork: URLSessionDelegate {
@@ -101,8 +94,5 @@ extension NetWork: URLSessionDelegate {
 
         completionHandler(.cancelAuthenticationChallenge, nil)
     }
-
-
-
 
 }

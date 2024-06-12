@@ -8,7 +8,6 @@
 import Foundation
 import RxSwift
 import RxCocoa
-import Alamofire
 
 enum ErrorDefine: Int, Error {
     case unAuthorized = 401

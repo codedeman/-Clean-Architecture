@@ -6,34 +6,39 @@
 //
 
 import SwiftUI
+import ShimmerLoading
 
 struct ContentView: View {
-    @StateObject var viewModel = MovieViewModel(network: NetWork())
+    @StateObject var viewModel = MovieViewModel(network: NetworkALaMo())
     @Environment(\.dismiss) var dismiss
-    var body: some View {
-        NavigationView(content: {
-            List(viewModel.result) { movie in
-                MovieRow(movie: movie)
-            }.overlay {
-                if viewModel.isSearching {
-                  ProgressView()
-                }
-            }
 
-        }).navigationTitle("Search").toolbar(content: {
-            ToolbarItem(placement: .confirmationAction) {
-                Button(action: { dismiss() }) {
-                    Text("Done")
+    var body: some View {
+
+        NavigationView {
+            List {
+                if viewModel.isSearching {
+                    // Show shimmer loading items
+                    ForEach(0..<10, id: \.self) { _ in
+                        ShimmerView(color: .gray,direction: .leftToRight) {
+                            MovieRow(movie: .init())
+                        }.frame(height: 100)
+                    }
+                } else {
+                    // Show actual movie rows
+                    ForEach(viewModel.result) { movie in
+                        MovieRow(movie: movie)
+                    }
                 }
             }
-        }).searchable(text: $viewModel.searchTerm)
+            .navigationTitle("Search")
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button(action: { dismiss() }) {
+                        Text("Done")
+                    }
+                }
+            }
+            .searchable(text: $viewModel.searchTerm)
+        }
     }
 }
-
-//struct BookSearchTaskCancellationView_Previews: PreviewProvider {
-//  static var previews: some View {
-//      ContentView(viewModel: MovieViewModel())
-//  }
-//}
-
-

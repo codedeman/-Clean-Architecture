@@ -32,7 +32,13 @@ struct SearchModel: Codable,Identifiable {
         case Year
     }
     
-    init(Title: String? = nil, Year: String? = nil, imdbID: String? = nil, type: String? = nil, Poster: String? = nil) {
+    init(
+        Title: String? = nil,
+        Year: String? = nil,
+        imdbID: String? = nil,
+        type: String? = nil,
+        Poster: String? = nil
+    ) {
         self.Title = Title
         self.Year = Year
         self.imdbID = imdbID
@@ -41,7 +47,7 @@ struct SearchModel: Codable,Identifiable {
     }
 
     func convertStrtoURL() -> URL {
-        return URL(string: Poster ?? "")!
+        return URL(string: Poster ?? "https://")!
 
     }
 

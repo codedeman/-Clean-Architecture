@@ -17,8 +17,14 @@
 		0A0474DE2B012D7F008337BD /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0474DD2B012D7F008337BD /* MovieViewModel.swift */; };
 		0A0474E12B012E22008337BD /* MovieEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0474E02B012E22008337BD /* MovieEntity.swift */; };
 		0A0474E32B01C57D008337BD /* MovieRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A0474E22B01C57D008337BD /* MovieRow.swift */; };
+		0A29354F2C16F15F00902387 /* ShimmerLoading in Frameworks */ = {isa = PBXBuildFile; productRef = 0A29354E2C16F15F00902387 /* ShimmerLoading */; };
+		0A2935522C1700A800902387 /* NetWorkAlamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A2935512C1700A800902387 /* NetWorkAlamofire.swift */; };
+		0A2935552C17053600902387 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0A2935542C17053600902387 /* Alamofire */; };
+		0A2935572C17053600902387 /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 0A2935562C17053600902387 /* AlamofireDynamic */; };
 		0A9A35B82BC4EB410032ADA8 /* omdbapi.com.cer in Resources */ = {isa = PBXBuildFile; fileRef = 0A9A35B72BC4EB410032ADA8 /* omdbapi.com.cer */; };
 		0AA2BA022BBE9C1100B5ABF2 /* NetWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AA2BA012BBE9C1100B5ABF2 /* NetWork.swift */; };
+		0AFC1E802C18293D0051E35E /* MyInitializableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC1E7F2C18293D0051E35E /* MyInitializableView.swift */; };
+		0AFC1E822C193A6C0051E35E /* DBSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AFC1E812C193A6C0051E35E /* DBSecurity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,8 +59,11 @@
 		0A0474DD2B012D7F008337BD /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		0A0474E02B012E22008337BD /* MovieEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieEntity.swift; sourceTree = "<group>"; };
 		0A0474E22B01C57D008337BD /* MovieRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRow.swift; sourceTree = "<group>"; };
+		0A2935512C1700A800902387 /* NetWorkAlamofire.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWorkAlamofire.swift; sourceTree = "<group>"; };
 		0A9A35B72BC4EB410032ADA8 /* omdbapi.com.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = omdbapi.com.cer; sourceTree = "<group>"; };
 		0AA2BA012BBE9C1100B5ABF2 /* NetWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetWork.swift; sourceTree = "<group>"; };
+		0AFC1E7F2C18293D0051E35E /* MyInitializableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyInitializableView.swift; sourceTree = "<group>"; };
+		0AFC1E812C193A6C0051E35E /* DBSecurity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBSecurity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +71,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0A29354F2C16F15F00902387 /* ShimmerLoading in Frameworks */,
+				0A2935572C17053600902387 /* AlamofireDynamic in Frameworks */,
+				0A2935552C17053600902387 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +127,9 @@
 				0A0474B82B012D51008337BD /* Preview Content */,
 				0A0474E22B01C57D008337BD /* MovieRow.swift */,
 				0AA2BA012BBE9C1100B5ABF2 /* NetWork.swift */,
+				0A2935512C1700A800902387 /* NetWorkAlamofire.swift */,
+				0AFC1E7F2C18293D0051E35E /* MyInitializableView.swift */,
+				0AFC1E812C193A6C0051E35E /* DBSecurity.swift */,
 			);
 			path = MovieChallengeSwiftUIVersion;
 			sourceTree = "<group>";
@@ -168,6 +183,11 @@
 			dependencies = (
 			);
 			name = MovieChallengeSwiftUIVersion;
+			packageProductDependencies = (
+				0A29354E2C16F15F00902387 /* ShimmerLoading */,
+				0A2935542C17053600902387 /* Alamofire */,
+				0A2935562C17053600902387 /* AlamofireDynamic */,
+			);
 			productName = MovieChallengeSwiftUIVersion;
 			productReference = 0A0474AF2B012D4F008337BD /* MovieChallengeSwiftUIVersion.app */;
 			productType = "com.apple.product-type.application";
@@ -240,6 +260,10 @@
 				Base,
 			);
 			mainGroup = 0A0474A62B012D4F008337BD;
+			packageReferences = (
+				0A29354D2C16F15F00902387 /* XCRemoteSwiftPackageReference "ShimmerLoading" */,
+				0A2935532C17053600902387 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 0A0474B02B012D4F008337BD /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,9 +309,12 @@
 			files = (
 				0A0474B52B012D4F008337BD /* ContentView.swift in Sources */,
 				0A0474E32B01C57D008337BD /* MovieRow.swift in Sources */,
+				0AFC1E822C193A6C0051E35E /* DBSecurity.swift in Sources */,
 				0AA2BA022BBE9C1100B5ABF2 /* NetWork.swift in Sources */,
 				0A0474E12B012E22008337BD /* MovieEntity.swift in Sources */,
 				0A0474B32B012D4F008337BD /* MovieChallengeSwiftUIVersionApp.swift in Sources */,
+				0A2935522C1700A800902387 /* NetWorkAlamofire.swift in Sources */,
+				0AFC1E802C18293D0051E35E /* MyInitializableView.swift in Sources */,
 				0A0474DE2B012D7F008337BD /* MovieViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,6 +642,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0A29354D2C16F15F00902387 /* XCRemoteSwiftPackageReference "ShimmerLoading" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/codedeman/ShimmerLoading.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		0A2935532C17053600902387 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0A29354E2C16F15F00902387 /* ShimmerLoading */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A29354D2C16F15F00902387 /* XCRemoteSwiftPackageReference "ShimmerLoading" */;
+			productName = ShimmerLoading;
+		};
+		0A2935542C17053600902387 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A2935532C17053600902387 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		0A2935562C17053600902387 /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0A2935532C17053600902387 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0A0474A72B012D4F008337BD /* Project object */;
 }
